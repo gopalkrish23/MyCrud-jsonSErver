@@ -1,0 +1,11 @@
+<p>
+  add works!
+</p>
+<form name="productEntry" #newProduct="ngForm" (ngSubmit)="addData(newProduct.value)">
+<div >
+<LABEL>Product name: </LABEL><input name="name" type="text" [(ngModel)]="nme"><BR/>
+	  <label> Price: </label><input name="price" type="text" [(ngModel)]="prc"><br/>
+	   <input type="submit" value="Add Product" [disabled]="!nme || !prc">
+</div>
+</form>
+<h4 *ngIf="inserted">{{success}}</h4>

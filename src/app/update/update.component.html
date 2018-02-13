@@ -1,0 +1,9 @@
+<div>
+<form #updateForm="ngForm" (ngSubmit)="updateData(updateForm.value)">
+	<label>Product</label>
+	<input type="text" name="updatename" [(ngModel)]='updateobj.name' ngModel>
+	<label>Price</label>
+	<input type="text" name="updateprice" [(ngModel)]='updateobj.price' ngModel>
+	<input type="submit" value="update">
+</form>
+</div>
